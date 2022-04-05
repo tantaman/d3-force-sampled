@@ -1,0 +1,206 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 4,
+    "total": 4,
+    "workspacePrefix": "/Users/tantaman/workspace/sabbat-learning-2022/threejs-speed-graph"
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "private": true,
+      "version": "0.0.0",
+      "packageManager": "pnpm@6.30.0",
+      "engines": {
+        "node": ">=14",
+        "pnpm": ">=3"
+      },
+      "devDependencies": {
+        "@tsconfig/node16": "^1.0.2",
+        "turbo": "^1.1.1"
+      },
+      "scripts": {
+        "build": "turbo run build"
+      }
+    },
+    "prefix": "/Users/tantaman/workspace/sabbat-learning-2022/threejs-speed-graph"
+  },
+  "2 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "d3-force-sampled",
+      "version": "1.0.1",
+      "description": "Fast force-directed graph layout using random sampling.",
+      "keywords": [
+        "d3",
+        "d3-module",
+        "layout",
+        "network",
+        "graph",
+        "force",
+        "sampled",
+        "verlet",
+        "infovis"
+      ],
+      "homepage": "https://github.com/twosixlabs/d3-force-sampled/",
+      "license": "BSD-3-Clause",
+      "author": {
+        "name": "Robert Gove",
+        "url": "http://rpgove.com"
+      },
+      "main": "build/d3-force-sampled.js",
+      "module": "index",
+      "jsnext:main": "index",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/twosixlabs/d3-force-sampled.git"
+      },
+      "scripts": {
+        "pretest": "rm -rf build && mkdir build && rollup -c",
+        "build": "rm -rf build && mkdir build && rollup -c",
+        "test": "tape 'test/**/*-test.js' && eslint index.js src",
+        "prepare": "npm run test && uglifyjs build/d3-force-sampled.js -c -m --comments '/Copyright/' -o build/d3-force-sampled.min.js",
+        "postpublish": "git push && git push --tags && zip -j build/d3-force-sampled.zip -- LICENSE README.md build/d3-force-sampled.js build/d3-force-sampled.min.js"
+      },
+      "devDependencies": {
+        "eslint": ">=4.18.2",
+        "rollup": "0.64",
+        "seedrandom": "2",
+        "tape": "4",
+        "uglify-js": "3"
+      },
+      "dependencies": {
+        "npm": "^6.9.0"
+      }
+    },
+    "prefix": "/Users/tantaman/workspace/sabbat-learning-2022/threejs-speed-graph/git-modules/d3-force-sampled"
+  },
+  "3 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "force-graph",
+      "version": "1.42.9",
+      "description": "2D force-directed graph rendered on HTML5 canvas",
+      "unpkg": "dist/force-graph.min.js",
+      "main": "dist/force-graph.common.js",
+      "module": "dist/force-graph.module.js",
+      "types": "src/index.d.ts",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vasturiano/force-graph.git"
+      },
+      "homepage": "https://github.com/vasturiano/force-graph",
+      "keywords": [
+        "2d",
+        "force",
+        "simulation",
+        "graph",
+        "canvas",
+        "d3"
+      ],
+      "author": {
+        "name": "Vasco Asturiano",
+        "url": "http://bl.ocks.org/vasturiano"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/vasturiano/force-graph/issues"
+      },
+      "scripts": {
+        "build": "rimraf dist && rollup -c",
+        "dev": "rollup -w -c rollup.config.dev.js",
+        "prepare": "npm run build"
+      },
+      "files": [
+        "dist/**/*",
+        "example/**/*",
+        "src/**/*"
+      ],
+      "dependencies": {
+        "@tweenjs/tween.js": "18",
+        "accessor-fn": "1",
+        "bezier-js": "3 - 6",
+        "canvas-color-tracker": "1",
+        "d3-array": "1 - 3",
+        "d3-drag": "2 - 3",
+        "d3-force-3d": "2 - 3",
+        "d3-scale": "1 - 4",
+        "d3-scale-chromatic": "1 - 3",
+        "d3-selection": "2 - 3",
+        "d3-zoom": "2 - 3",
+        "index-array-by": "1",
+        "kapsule": "^1.13",
+        "lodash.throttle": "4"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.17.8",
+        "@babel/plugin-proposal-class-properties": "^7.16.7",
+        "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+        "@babel/preset-env": "^7.16.11",
+        "@rollup/plugin-babel": "^5.3.1",
+        "@rollup/plugin-commonjs": "^21.0.2",
+        "@rollup/plugin-node-resolve": "^13.1.3",
+        "postcss": "^8.4.12",
+        "rimraf": "^3.0.2",
+        "rollup": "^2.70.1",
+        "rollup-plugin-dts": "^4.2.0",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-terser": "^7.0.2",
+        "typescript": "^4.6.3"
+      }
+    },
+    "prefix": "/Users/tantaman/workspace/sabbat-learning-2022/threejs-speed-graph/git-modules/force-graph"
+  },
+  "4 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "@crumbz/speed-graph",
+      "version": "1.0.0",
+      "description": "Speed Graph",
+      "repository": "git@github.com:tantaman/sabbat-2022-learning.git",
+      "author": "tantaman <matt.wonlaw@gmail.com>",
+      "license": "Apache 2.0",
+      "private": true,
+      "scripts": {
+        "start": "vite",
+        "build": "vite build",
+        "tsc": "tsc --noEmit",
+        "preview": "vite preview",
+        "test:unit": "vitest"
+      },
+      "devDependencies": {
+        "vite": "^2.9.1",
+        "vitest": "^0.7.13"
+      },
+      "dependencies": {
+        "d3": "^7.4.2",
+        "force-graph": "workspace:*",
+        "three": "^0.139.2",
+        "d3-force-sampled": "worspace:*"
+      }
+    },
+    "prefix": "/Users/tantaman/workspace/sabbat-learning-2022/threejs-speed-graph/ui"
+  },
+  "5 debug pnpm:context": {
+    "currentLockfileExists": true,
+    "storeDir": "/Users/tantaman/.pnpm-store/v3",
+    "virtualStoreDir": "/Users/tantaman/workspace/sabbat-learning-2022/threejs-speed-graph/node_modules/.pnpm"
+  },
+  "6 debug pnpm:stage": {
+    "prefix": "/Users/tantaman/workspace/sabbat-learning-2022/threejs-speed-graph",
+    "stage": "resolution_started"
+  },
+  "7 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../git-modules/force-graph",
+    "wanted": {
+      "dependentId": "ui",
+      "name": "force-graph",
+      "rawSpec": "workspace:*"
+    }
+  },
+  "8 error pnpm": {
+    "code": "ERR_PNPM_SPEC_NOT_SUPPORTED_BY_ANY_RESOLVER",
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "d3-force-sampled@worspace:* isn't supported by any available resolver.",
+      "code": "ERR_PNPM_SPEC_NOT_SUPPORTED_BY_ANY_RESOLVER",
+      "stack": "pnpm: d3-force-sampled@worspace:* isn't supported by any available resolver.\n    at Object.resolve (/Users/tantaman/.nvm/versions/node/v17.5.0/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.1/node_modules/pnpm/dist/pnpm.cjs:86090:17)\n    at async run (/Users/tantaman/.nvm/versions/node/v17.5.0/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.1/node_modules/pnpm/dist/pnpm.cjs:74183:23)"
+    }
+  }
+}

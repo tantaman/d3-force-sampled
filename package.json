@@ -28,6 +28,7 @@
   },
   "scripts": {
     "pretest": "rm -rf build && mkdir build && rollup -c",
+    "build": "rm -rf build && mkdir build && rollup -c",
     "test": "tape 'test/**/*-test.js' && eslint index.js src",
     "prepare": "npm run test && uglifyjs build/d3-force-sampled.js -c -m --comments '/Copyright/' -o build/d3-force-sampled.min.js",
     "postpublish": "git push && git push --tags && zip -j build/d3-force-sampled.zip -- LICENSE README.md build/d3-force-sampled.js build/d3-force-sampled.min.js"
